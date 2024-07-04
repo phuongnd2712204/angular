@@ -1,0 +1,33 @@
+<div class="container">
+    <h2>{{hi}}</h2>
+    <a href="#!/foods/add"><button>Thêm</button></a>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>MÃ</th>
+                <th>Tên</th>
+                <th>Loại</th>
+                <th>Hạn</th>
+                <th>Giá</th>
+                <th>Thao tác</th>
+            </tr>
+        </thead>
+        <tbody ng-repeat="sp in foodsss">
+            <tr>
+                <td>{{$index +1}}</td>
+                <td>{{sp.ma_sp}}</td>
+                <td>{{sp.ten}}</td>
+                <td ng-if="sp.loai == 1">Sáng</td>
+                <td ng-if="sp.loai == 2">Trưa</td>
+                <td ng-if="sp.loai == 3">Tối</td>
+                <td>{{sp.han_su_dung}}</td>
+                <td>{{sp.gia}}</td>
+                <td><button ng-click="view(sp.id)">Chi Tiết</button>
+                    <button ng-click="edit(sp.id)">Sửa</button>
+                    <button ng-click="deleteFood(sp.id)">Xoá</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

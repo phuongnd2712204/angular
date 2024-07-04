@@ -1,0 +1,43 @@
+<div class="container">
+    <h2>{{hi}}</h2>
+
+    <form action="">
+
+        <div class="mb-3">
+            <label class="form-label">Mã</label>
+            <input type="text" class="form-control" ng-model="inputValue.ma_sp">
+            <span ng-if="checkDl.ma_sp == true">Vui lòng nhhapaj</span>
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label">Tên</label>
+            <input type="text" class="form-control" ng-model="inputValue.ten">
+            <span ng-if="checkDl.ten == true">Vui lòng nhhapaj</span>
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label">Loại</label>
+            <select name="" id="" ng-model="inputValue.loai">
+                <option value=""></option>
+                <option value="1">Sáng</option>
+                <option value="2">Trưa</option>
+                <option value="3">Tối</option>
+            </select>
+            <span ng-if="checkDl.loai == true">Vui lòng nhhapaj</span>
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label">Hạn</label>
+            <input type="text" class="form-control" ng-model="inputValue.han_su_dung">
+            <span ng-if="checkDl.han_su_dung == true">Vui lòng nhhapaj</span>
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label">Giá</label>
+            <input type="text" class="form-control" ng-model="inputValue.gia">
+            <span ng-if="checkDl.gia == true">Vui lòng nhhapaj</span>
+          </div>
+
+          <button ng-click="submit()">Gửi</button>
+    </form>
+</div>
